@@ -21,7 +21,6 @@ cur.execute("CREATE TABLE IF NOT EXISTS garage ("
             ")")
 connection.commit()
 
-cur.executemany("INSERT INTO `garage` (data_stopped, liters, id_driver) VALUES" \
-            "(?, ?, ?)", (list_garage))
+
+cur.executemany("INSERT INTO users (surname, money) VALUES (?, ?)", (list_users))
 connection.commit()
-connection.close()
